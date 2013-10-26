@@ -1,0 +1,329 @@
+
+@font-face { font-family: 'SegoeUI' !important; src: url('icons/segoeuil.TTF') !important; }
+
+body{
+
+	background-color:white !important;
+
+	text-shadow:none !important;
+	border:0px solid white !important;
+	font-family: 'SegoeUI' !important;
+}
+
+
+
+.corner{
+
+	float:right;
+
+	width:37px;
+
+	height:37px;
+
+}
+
+.theHeader:not(#dialog_header), .ui-header:not(#dialog_header){
+
+	background: repeat url("./icons/background_w.png"); 
+
+	height: 90px;
+
+	margin:0px !important;
+
+	padding:0px !important;
+
+	width:100%;
+
+}
+
+
+.header_title{
+
+	font-size: 25px;
+
+	top:30px;
+
+	position:relative;
+
+	font-family: 'SegoeUI';
+
+	color:white;
+
+	text-shadow:none;
+}
+
+
+.title_inside{
+
+	background-color:#98dbf4; 
+
+	width:70%;
+
+	height:45px;
+
+	float:center;
+
+	margin-left:auto;
+
+	margin-right:auto;	
+
+	padding-top:15px;
+
+	padding-bottom:7px;
+
+}
+
+.ui-header{
+
+	background-color:white !important;
+	padding:0px !important;
+
+}
+
+
+.ui-content{
+
+	padding: 0px;
+
+}
+
+
+
+.x1 .ui-li {
+
+	background-color:#e9573e;
+
+}
+
+
+
+.x2 .ui-li {
+
+	background-color:#fa9d24;
+
+}
+
+.x3 .ui-li {
+
+	background-color:#009f40;
+
+}
+
+.x4 .ui-li {
+
+	background-color:#03a2d5;
+
+}
+
+.x5 .ui-li {
+
+	background-color:#ab93eb;
+
+}
+
+.x6 .ui-li {
+
+	background-color:#ca7ac4;
+
+}
+
+
+
+.ui-li {
+
+	/* panel items parameters */
+
+	height:80px !important;
+
+	background-color:green;
+
+	border:0px solid white !important;
+
+	font-family: 'SegoeUI';
+
+	font-size:27px;
+
+	text-shadow:none;
+
+}
+
+
+
+.ui-li a{
+
+	/*	Text Color	of the panel content */
+
+	color:white !important;
+
+	height: 100% !important;
+
+	padding: 0px !important;
+
+	padding-left: 70px!important;
+
+	padding-top:20px !important;
+
+		
+
+}
+
+.ui-li img{
+
+	width:35px;
+
+	height:35px;
+
+	padding-top:23px;	
+
+	padding-left:20px;
+
+}
+
+
+
+.formenu {
+	position:relative;
+	z-index:3;
+	top: 46px !important;
+	padding: 0px !important;
+	padding-right:50px;
+	left:-1px !important;
+	
+}
+
+
+
+.ui-panel-inner{
+
+	
+
+}
+
+
+
+ul { list-style-type: none; text-align: left; margin:0px;}
+
+
+
+#tag{
+
+	background-color:white !important;
+	border:0px solid white !important;
+
+}
+
+
+
+.wrapper {
+
+    min-height: 90%;
+
+    height: auto !important;
+
+    height: 100%;
+
+    margin: 0 auto -100px; /* the bottom margin is the negative value of the footer's height */
+
+    color:#c7c7c7;
+
+    font-size:26px;
+
+    text-align:left;
+
+	padding:30px;
+
+    font-family:'SegoeUI';
+    background-color:white !important;
+    border:0px solid white !important;
+
+}
+
+
+
+.footer, .push {
+
+	width:100%;
+
+	position:absolute;
+	top:720px;
+
+    height: 100px; /* .push must be the same height as .footer */
+
+    color:black;
+    height: 60px;
+    background-color:white !important;
+    border:0px solid white !important;
+
+}
+
+
+
+.taber{
+
+	position:relative;
+
+	width:397px;
+
+	margin: 0 auto -199px;
+
+	color:white
+
+}
+
+
+
+.h_tabs{
+
+	float:left;
+
+	width:130px;
+
+	height:55px;
+
+}
+
+
+
+#t_about{ background-color:#f15852; }
+
+#t_about.active{ background-color:#f4a2a2; }
+
+
+
+#t_goal{ background-color:#e69843; }
+
+#t_goal.active{ background-color:#facd91; }
+
+
+
+#t_target{ background-color:#23baa7; }
+
+#t_target.active{ background-color:#94d2ad; }
+
+
+
+
+
+
+p{
+
+	text-shadow:none;
+
+}
+
+
+
+selection { text-shadow: none; }
+
+
+
+-moz-selection { text-shadow: none; }
+
+
+
+h3{
+
+	text-shadow:none;
+
+	color:white;
+}
