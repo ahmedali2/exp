@@ -24,7 +24,7 @@ body{
 
 .theHeader:not(#dialog_header), .ui-header:not(#dialog_header){
 
-	background: repeat url("./icons/background_w.png"); 
+	background: repeat url("./icons/backgroundw.png"); 
 
 	height: 90px;
 
