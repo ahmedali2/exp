@@ -133,7 +133,6 @@ ul { list-style-type: none; text-align: left; margin:0px;}
 }
 
 .wrapper {
-    height: 100%;
     color:#c7c7c7;
     font-size:26px;
     text-align:left;
@@ -147,11 +146,11 @@ ul { list-style-type: none; text-align: left; margin:0px;}
 	width:100%;
 	position:absolute;
 	top:720px;
-    height: 100px; /* .push must be the same height as .footer */
     color:black;
     height: 60px;
     background-color:white !important;
     border:0px solid white !important;
+    z-index:3;
 }
 
 .taber{
