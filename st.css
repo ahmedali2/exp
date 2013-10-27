@@ -116,6 +116,12 @@ body{
 	padding-right:50px;
 	left:-1px !important;
 }
+
+.formenu a:active{
+	background-color:white !important;
+}
+.ui-btn-active { color: red !important; background: none !important; background-color: white !important;  border:0px!important;}
+
 .ui-panel-inner{
 }
 

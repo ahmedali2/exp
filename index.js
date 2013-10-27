@@ -3,8 +3,7 @@ $(document).ready(function() {
 	var height = (window.innerHeight > 0) ? window.innerHeight : screen.height;
 
 	//Here assign the heights of all pages to be the height as the one below...
-	$('#news').css('height', height);
-
+	//$('#home').css('height', height);
 	
 	$('.tag').css('height', (height-90));
 	$('.wrapper').css('height', (height-150));
@@ -67,7 +66,9 @@ $(document).ready(function() {
 	
 	//Menu button to open panel
 
-
+	$('#sponsors').click(function(){
+		console.log('Sponsors clicked');
+	});
 
 
 
