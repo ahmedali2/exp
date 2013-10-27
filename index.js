@@ -1,10 +1,15 @@
 $(document).ready(function() {		
 	var width = (window.innerWidth > 0) ? window.innerWidth : screen.width;
 	var height = (window.innerHeight > 0) ? window.innerHeight : screen.height;
-	
-	$('#news').css('height', height);
-	$('#tag').css('height', (height-90));
 
+	//Here assign the heights of all pages to be the height as the one below...
+	$('#news').css('height', height);
+
+	
+	$('.tag').css('height', (height-90));
+	$('.wrapper').css('height', (height-150));
+	$('.footer').css('top', (height-60));
+	
 	//For handling the home page bottom tabs (background buttons..etc)
 	$('#p_goal').hide();
 	$('#p_target').hide();
@@ -62,4 +67,33 @@ $(document).ready(function() {
 	
 	//Menu button to open panel
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	console.log('the wrapper: ',$('.wrapper').height());
+	console.log('the content div: ',$('.tag').height());
+	console.log('the home div: ',$('#home').height());
+	console.log('the footer div: ',$('.footer').height());		
+	console.log('the header div: ',$('.theHeader').height());	
+	
 }); 
