@@ -7,10 +7,9 @@ $(document).on("pageshow", function () {
 	$('.footer').css('top', (height-60));
 	console.log('done2');
 });
+
 	
 $(document).ready(function() {		
-	//var width = (window.innerWidth > 0) ? window.innerWidth : screen.width;
-	//var height = (window.innerHeight > 0) ? window.innerHeight : screen.height;
 
 	//For handling the home page bottom tabs (background buttons..etc)
 	$('#p_goal').hide();
@@ -67,7 +66,6 @@ $(document).ready(function() {
 		adjustTabs();
 	});	
 	
-
 	
 	console.log('the wrapper: ',$('.wrapper').height());
 	console.log('the content div: ',$('.tag').height());
