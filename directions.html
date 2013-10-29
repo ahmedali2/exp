@@ -12,7 +12,6 @@
     <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=true"></script>
 	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
 	<script type="text/javascript" src="jquery.ui.map.js"></script>	
-    <script type="text/javascript" src="index.js"></script>
    
   </head>
 
@@ -46,7 +45,7 @@
 				var width = (window.innerWidth > 0) ? window.innerWidth : screen.width;
 				var height = (window.innerHeight > 0) ? window.innerHeight : screen.height;
 				$('.tag').css('height', (height-90));
-				$('.wrapper').css('height', (height-150));
+				$('.wrapper').css('height', (height-90));
 				
 				console.log('done2');
 				
@@ -54,7 +53,7 @@
 				 	var cardHeight = height - $('.card').height();
 				 	console.log(cardHeight);
 				 	$('.card').css('top', cardHeight);
-				 	$('.card').css('width', $('.class').width() );
+				 	$('.card').css('width', $('.theHeader').width() );
 				 });
 				 
 				
@@ -77,6 +76,7 @@
         	</div>
         
 		    <div class='card'>
+		    <br>
 		    <table >
 				<tr>
 					<p class="venue">Wanha Satama</p>
@@ -91,7 +91,7 @@
 					</td>
 				</tr>
 		    </table>
-			    
+			    <br>
 		    	
 		    </div>
 
