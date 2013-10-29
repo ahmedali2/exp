@@ -50,51 +50,20 @@
 				
 				console.log('done2');
 				
-				 $(document).ready(function(){
-				 	var cardHeight = height - $('.card').height();
-				 	console.log(cardHeight);
-				 	$('.card').css('top', cardHeight);
-				 	$('.card').css('width', $('.theHeader').width() );
-				 });
-				 
-				
 				 $('#map_canvas').css('height', (height-170));
 				 
 					var mobileDemo = { 'center': '60.165694, 24.966224', 'zoom': 17 };
 					$('#map_canvas').gmap({'center': mobileDemo.center, 'zoom': mobileDemo.zoom, 'disableDefaultUI':true, 'callback': function() {
 						var self = this;
 						self.addMarker({'position': this.get('map').getCenter() }).click(function() {
-							showCard();
+							$('#map_canvas').gmap('openInfoWindow', {'content': '<p style="font-size:30px"><strong>Wanha Satama</strong><br> Pikku Satamakatu 3<br>00160 Helsinki</p>'}, this);
 						});
 					}}); 
 
-					function showCard(){
-						
-					
-					}
-			
 				</script>
         	</div>
         
-		    <div class='card'>
-		    <br>
-		    <table >
-				<tr>
-					<p class="venue">Wanha Satama</p>
-				</tr>
-				<tr>
-					<td>
-						<img style="width:40px;height:40px;" src="icons/directionicon.png">
-					</td>
-					<td>
-						<p class="address" >Pikku Satamakatu 3</p>
-				    	<p class="address">00160 Helsinki</p>
-					</td>
-				</tr>
-		    </table>
-			    <br>
-		    	
-		    </div>
+		   
 
 		</div>
 	</div><!-- /Directions page-->		
