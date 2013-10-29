@@ -6,6 +6,7 @@ $(document).on("pageshow", function () {
 	$('.wrapper').css('height', (height-150));
 	$('.footer').css('top', (height-60));
 	console.log('done2');
+
 });
 
 	
@@ -72,5 +73,7 @@ $(document).ready(function() {
 	console.log('the home div: ',$('#home').height());
 	console.log('the footer div: ',$('.footer').height());		
 	console.log('the header div: ',$('.theHeader').height());	
-	
+	console.log('the card div: ',$('.card').height());
+
+			
 }); 

@@ -42,24 +42,49 @@
 			<div class="wrapper">
 				<div id="map_canvas"></div>
 				 <script type="text/javascript">
-				 var height = (window.innerHeight > 0) ? window.innerHeight : screen.height;
+					 var height = (window.innerHeight > 0) ? window.innerHeight : screen.height;
+				 $(document).ready(function(){
+				 	var cardHeight = height - $('.card').height();
+				 	console.log(cardHeight);
+				 	$('.card').css('top', cardHeight);
+				 });
+				 
+				
 				 $('#map_canvas').css('height', (height-170));
 				 
 					var mobileDemo = { 'center': '60.165694, 24.966224', 'zoom': 17 };
 					$('#map_canvas').gmap({'center': mobileDemo.center, 'zoom': mobileDemo.zoom, 'disableDefaultUI':true, 'callback': function() {
 						var self = this;
 						self.addMarker({'position': this.get('map').getCenter() }).click(function() {
-							alert('hello');
+							showCard();
 						});
 					}}); 
+
+					function showCard(){
+						
+					
+					}
 			
 				</script>
         	</div>
         
-		    <div class="footer">
-		      <div class="taber">
-	      	
-		      </div>
+		    <div class='card'>
+		    <table >
+				<tr>
+					<p class="venue">Wanha Satama</p>
+				</tr>
+				<tr>
+					<td>
+						<img style="width:40px;height:40px;" src="icons/directionicon.png">
+					</td>
+					<td>
+						<p class="address" >Pikku Satamakatu 3</p>
+				    	<p class="address">00160 Helsinki</p>
+					</td>
+				</tr>
+		    </table>
+			    
+		    	
 		    </div>
 
 		</div>
