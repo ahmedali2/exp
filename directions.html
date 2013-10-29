@@ -21,12 +21,12 @@
 	<div data-role="page" id="directions">
 		<div data-role="panel" data-position="left" data-display="push" id="panel" data-theme="c" >
 			<ul id="panel_content" data-role="listview" data-icon="false" data-theme="b" data-divider-theme="false" style="margin-top:-16px;background-color:#e9573e !important;" class="nav-search">
-				<li data-filtertext="" class="x1"><a data-transition="slide" class="b" href="./index.html"><img src="icons/homeicon.png">Home</a></li>
-				<li data-filtertext="" class="x2"><a data-transition="slide" class="b" href="./schedule.html"><img src="icons/scheduleicon.png">Schedule</a></li>
-				<li data-filtertext="" class="x3"><a data-transition="slide" class="b" href="./sponsors.html"><img src="icons/sponsorsicons.png">Sponsers</a></li>
-				<li data-filtertext="" class="x4"><a data-transition="slide" class="b" href="./speakers.html"><img src="icons/speakers.png">Speakers</a></li>
+				<li data-filtertext="" class="x1"><a data-transition="slide" rel="external"class="b" href="./index.html"><img src="icons/homeicon.png">Home</a></li>
+				<li data-filtertext="" class="x2"><a data-transition="slide" rel="external"class="b" href="./schedule.html"><img src="icons/scheduleicon.png">Schedule</a></li>
+				<li data-filtertext="" class="x3"><a data-transition="slide" rel="external"class="b" href="./sponsors.html"><img src="icons/sponsorsicons.png">Sponsers</a></li>
+				<li data-filtertext="" class="x4"><a data-transition="slide" rel="external"class="b" href="./speakers.html"><img src="icons/speakers.png">Speakers</a></li>
 				<li data-filtertext="" class="x5"><a data-transition="slide" rel="external" class="b" href="./directions.html"><img src="icons/directionicon.png">Directions</a></li>
-				<li data-filtertext="" class="x6"><a data-transition="slide" class="b" href="./contact.html"><img src="icons/contacticon.png">Contact</a></li>
+				<li data-filtertext="" class="x6"><a data-transition="slide" rel="external"class="b" href="./contact.html"><img src="icons/contacticon.png">Contact</a></li>
 			</ul>
 		</div><!-- /panel -->
 		
@@ -37,21 +37,24 @@
 		</div><!-- /header -->
 
 		<div data-role="content" class="tag">
-		
+			
 			<div class="wrapper">
+				<br>
 				<div id="map_canvas"></div>
 				 <script type="text/javascript">
 				 
 				var width = (window.innerWidth > 0) ? window.innerWidth : screen.width;
 				var height = (window.innerHeight > 0) ? window.innerHeight : screen.height;
+
+				$(document).ready(function(){
+					$('#directions').css('height',height);
+					$('.tag').css('height', (height-90));
+					
+					console.log('done2');
 				
-				$('.tag').css('height', (height-90));
-				$('.wrapper').css('height', (height-90));
-				
-				console.log('done2');
-				
-				 $('#map_canvas').css('height', (height-170));
-				 
+					 $('#map_canvas').css('height', (height-200));
+					 $('#map_canvas').css('width', (width-80));
+					 
 					var mobileDemo = { 'center': '60.165694, 24.966224', 'zoom': 17 };
 					$('#map_canvas').gmap({'center': mobileDemo.center, 'zoom': mobileDemo.zoom, 'disableDefaultUI':true, 'callback': function() {
 						var self = this;
@@ -59,11 +62,18 @@
 							$('#map_canvas').gmap('openInfoWindow', {'content': '<p style="font-size:30px"><strong>Wanha Satama</strong><br> Pikku Satamakatu 3<br>00160 Helsinki</p>'}, this);
 						});
 					}}); 
-
+					
+					$('.footer').css('top', (height-60));
+					console.log($('.footer').css('top'));
+				});
+				
+				
+				
 				</script>
         	</div>
         
-		   
+		    <div class="footer">
+		    </div>
 
 		</div>
 	</div><!-- /Directions page-->		

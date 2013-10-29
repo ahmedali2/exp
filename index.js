@@ -70,6 +70,7 @@ $(document).ready(function() {
 	console.log('the wrapper: ',$('.wrapper').height());
 	console.log('the content div: ',$('.tag').height());
 	console.log('the home div: ',$('#home').height());
+	console.log('the directions div: ',$('#directions').height());
 	console.log('the footer div: ',$('.footer').height());		
 	console.log('the header div: ',$('.theHeader').height());	
 	console.log('the card div: ',$('.card').height());

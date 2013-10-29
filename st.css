@@ -225,20 +225,10 @@ h3{
 }
 
 #map_canvas{
-	margin-top:20px;
 	height:100px;
-	overflow:hidden !important;
+	overflow:scroll !important;
 }
 
-.card{
-	font-family: 'SegoeUI';
-	background-color:#22b9a6;
-	position:absolute;
-	top:600px;
-	z-index:4;
-	text-align:left;
-	padding-left:50px;
-}
 
 .venue{
 	font-size:32px;
