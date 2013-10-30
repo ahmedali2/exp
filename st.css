@@ -165,7 +165,7 @@ ul { list-style-type: none; text-align: left; margin:0px;}
 	position:relative;
 	width:397px;
 	margin: 0 auto -199px;
-	color:white
+	color:white;
 }
 
 .h_tabs{
@@ -249,3 +249,38 @@ h3{
 	margin-left:8px !important;
 	margin-right:8px !important;
 }
+
+.contact_h{
+	color: #c7c7c7 !important;
+}
+
+.c_email{
+	height:40px !important;
+}
+
+.c_message{
+	height:160px !important;
+}
+
+.submit{
+	width:100% !important;
+	text-decoration: none !important;
+	color: white;
+	font-size:20px;
+	top: 15px !important;
+	position: relative;
+}
+
+.taber2{
+	position:relative;
+	width: 100% ;
+	color:white;
+	background-color: #22b9a6 !important;
+	height: 100% !important;
+	
+}
+
+.submit a:active{
+	background-color:none !important;
+}
+
