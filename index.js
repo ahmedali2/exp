@@ -38,7 +38,27 @@ $(document).on("pageshow", function () {
 		$('#p_target').fadeIn(500);
 		adjustTabs();
 	});	
+
+	//----------- Message -------------
+	$('.submit').attr('disabled','disabled');
+
+	$('.submit').click(function(){
+		if($('.submit').attr('disabled') == 'disabled'){
+			console.log('its disabled');
+			 toast('Please type your email and a message..');
+		} else {
+			console.log('its enabled');
+			send();
+		}
+	});
 	
+	$('#c_email').keyup(function(){
+		enableSubmit();
+	});
+
+	$('#c_message').keyup(function(){
+		enableSubmit();
+	});
 });
 
 function adjustTabs(){
@@ -80,6 +100,7 @@ function toast(msg){
 		$(this).remove();
 	});
 }
+
 $(document).ready(function() {		
 
 	//For handling the home page bottom tabs (background buttons..etc)
@@ -122,26 +143,6 @@ $(document).ready(function() {
 	console.log('the header div: ',$('.theHeader').height());	
 	console.log('the card div: ',$('.card').height());
 
-	//----------- Message -------------
-	$('.submit').attr('disabled','disabled');
-
-	$('.submit').click(function(){
-		if($('.submit').attr('disabled') == 'disabled'){
-			console.log('its disabled');
-			 toast('Please type your email and a message..');
-		} else {
-			console.log('its enabled');
-			send();
-		}
-	});
-	
-	$('#c_email').keyup(function(){
-		enableSubmit();
-	});
-
-	$('#c_message').keyup(function(){
-		enableSubmit();
-	});
 	
 	function enableSubmit(){
 		if($('#c_email').val().trim()!='' && $('#c_message').val().trim()!= '') {
