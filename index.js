@@ -131,6 +131,7 @@ function send(){
 					$('#c_email').val('');
 					$('#c_sub').val('');
 					$('#c_message').val('');
+					$('.submit').attr('disabled','disabled');
 				} else if(response.status=="error"){
 					//Show 'Sending Message failed try again later'
 					toast('Sending Message failed try again later.');
