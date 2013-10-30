@@ -101,6 +101,49 @@ function toast(msg){
 	});
 }
 
+function enableSubmit(){
+	if($('#c_email').val().trim()!='' && $('#c_message').val().trim()!= '') {
+		$('.submit').removeAttr('disabled');
+	}else{
+		$('.submit').attr('disabled','disabled');
+	}
+}
+
+	
+
+function send(){
+	$.ajax({  
+		beforeSend: function() { $.mobile.showPageLoadingMsg(); }, //Show spinner
+        complete: function() { $.mobile.hidePageLoadingMsg() }, //Hide spinner
+		type: "POST",  
+		url: "http://teachinsquare.com/expo/send.php",  
+		data: { 'email': $('#c_email').val(), 'subject':$('#c_sub').val(), 'message': $('#c_message').val()} ,
+		success: function(data){  
+		
+			var response = JSON.parse(data);
+			
+			if(response.status){
+				console.log(response.status);
+
+				if(response.status=="success"){
+					//Show 'Message Sent!'
+					toast('Message Sent!');			
+					$('#c_email').val('');
+					$('#c_sub').val('');
+					$('#c_message').val('');
+				} else if(response.status=="error"){
+					//Show 'Sending Message failed try again later'
+					toast('Sending Message failed try again later.');
+				}					
+			} else {
+				//Show alert about the error
+				toast('Sending Message failed try again later.');
+			}
+		} 
+	});
+}
+
+
 $(document).ready(function() {		
 
 	//For handling the home page bottom tabs (background buttons..etc)
@@ -144,46 +187,6 @@ $(document).ready(function() {
 	console.log('the card div: ',$('.card').height());
 
 	
-	function enableSubmit(){
-		if($('#c_email').val().trim()!='' && $('#c_message').val().trim()!= '') {
-			$('.submit').removeAttr('disabled');
-		}else{
-			$('.submit').attr('disabled','disabled');
-		}
-	}
-
-	
-	
-	function send(){
-		$.ajax({  
-			beforeSend: function() { $.mobile.showPageLoadingMsg(); }, //Show spinner
-            complete: function() { $.mobile.hidePageLoadingMsg() }, //Hide spinner
-			type: "POST",  
-			url: "http://teachinsquare.com/expo/send.php",  
-			data: { 'email': $('#c_email').val(), 'subject':$('#c_sub').val(), 'message': $('#c_message').val()} ,
-			success: function(data){  
-			
-				var response = JSON.parse(data);
-				
-				if(response.status){
-					console.log(response.status);
-
-					if(response.status=="success"){
-						//Show 'Message Sent!'
-						toast('Message Sent!');			
-						$('#c_email').val('');
-						$('#c_sub').val('');
-						$('#c_message').val('');
-					} else if(response.status=="error"){
-						//Show 'Sending Message failed try again later'
-						toast('Sending Message failed try again later.');
-					}					
-				} else {
-					//Show alert about the error
-					toast('Sending Message failed try again later.');
-				}
-			} 
-		});
-	}
-			
 }); 
+
+
