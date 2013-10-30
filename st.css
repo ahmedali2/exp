@@ -255,7 +255,7 @@ h3{
 	padding:0px !important;
 	margin:0px !important;
 	padding-top: 30px !important;
-	font-size:20px;
+	font-size:25px;
 }
 
 .c_email{
@@ -273,22 +273,23 @@ h3{
 	height:60px!important;
 	text-decoration: none !important;
 	color: white;
+	left:0px;
 	font-size:20px;
-	top: 15px !important;
-	position: relative;
+	top: 60px ;
+	position: absolute;
 	background-color: #22b9a6 !important;
 }
 
 
-.submit a:active{
+.submit:active{
 	background-color:#29ddc7 !important;
-	border: 1px solid black;
 }
+
 .taber2{
 	position:relative;
 	width: 100% ;
 	color:white;
 	background-color: #22b9a6 !important;
 	height: 100% !important;
-	
 }
+
