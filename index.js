@@ -6,7 +6,7 @@ $(document).on("pageshow", function () {
 	$('.wrapper').css('height', (height-150));
 	$('.footer').css('top', (height-60));
 	console.log('done2');
-	$('.submit').css('top',(height-60));
+	$('.submit').css('top',(height-90));
 	$('#p_goal').hide();
 	$('#p_target').hide();
 });
