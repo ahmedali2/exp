@@ -13,7 +13,6 @@ $(document).on("pageshow", function () {
 	$('#p_about').show();
 	adjustTabs();
 
-
 	$(".h_tabs").on("mousedown mouseup", function(e){
   	  $(this).toggleClass( "active", e.type === "mousedown" );
 	});
