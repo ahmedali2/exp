@@ -49,37 +49,15 @@ body{
 	border-bottom: 1px solid rgba(255,255,255,0.3) !important;
 }
 
-.x1 .ui-li {
-	background-color:#e9573e;
-}
-
-.x2 .ui-li {
-	background-color:#fa9d24;
-}
-.x3 .ui-li {
-	background-color:#009f40;
-}
-.x4 .ui-li {
-	background-color:#03a2d5;
-}
-.x5 .ui-li {
-	background-color:#ab93eb;
-}
-.x6 .ui-li {
-	background-color:#ca7ac4;
-}
-
 
 
 .ui-li {
-
 	/* panel items parameters */
-	height:80px !important;
-	background-color:green;
+	height:92px !important;
 	border:0px solid white !important;
 	font-family: 'SegoeUI';
 	font-size:27px;
-	text-shadow:none;
+	
 }
 
 
@@ -91,6 +69,7 @@ body{
 	padding: 0px !important;
 	padding-left: 70px!important;
 	padding-top:20px !important;
+	font-family: 'SegoeUI';
 }
 
 .ui-li img{
@@ -103,11 +82,11 @@ body{
 .formenu {
 	position:relative;
 	z-index:3;
-	top: 35px !important;
+	top: 29px !important;
 	padding: 50px !important;
 	padding-left:0px !important;
 	padding-top:0px !important;
-	left:-1px !important;
+	left:0px !important;
 }
 
 .formenu a:active{
