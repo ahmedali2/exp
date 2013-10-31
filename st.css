@@ -2,7 +2,7 @@
 @font-face { font-family: 'SegoeUI' !important; src: url('icons/segoeuil.TTF') !important; }
 
 body{
-	background-color:white !important;
+	background-color:#f6f6f6 !important;
 	text-shadow:none !important;
 	border:0px solid white !important;
 	font-family: 'SegoeUI' !important;
@@ -15,7 +15,7 @@ body{
 }
 
 .theHeader:not(#dialog_header), .ui-header:not(#dialog_header){
-	background: repeat url("./icons/backgroundw.png"); 
+	background: repeat url("./icons/background.png"); 
 	height: 90px;
 	margin:0px !important;
 	padding:0px !important;
@@ -30,23 +30,11 @@ body{
 	font-family: 'SegoeUI';
 	color:white;
 	text-shadow:none;
-	background-color:white !important;
 }
 
-
-.title_inside{
-	background-color:#98dbf4; 
-	width:70%;
-	height:45px;
-	float:center;
-	margin-left:auto;
-	margin-right:auto;	
-	padding-top:15px;
-	padding-bottom:7px;
-}
 
 .ui-header{
-	background-color:white !important;
+	background-color:#f6f6f6 !important;
 	padding:0px !important;
 }
 
@@ -115,7 +103,7 @@ body{
 .formenu {
 	position:relative;
 	z-index:3;
-	top: 46px !important;
+	top: 35px !important;
 	padding: 50px !important;
 	padding-left:0px !important;
 	padding-top:0px !important;
@@ -133,18 +121,18 @@ body{
 ul { list-style-type: none; text-align: left; margin:0px;}
 
 .tag{
-	background-color:white !important;
+	background-color: #f6f6f6 !important;
 	border:0px solid white !important;
 	overflow:hidden !important;
 }
 
 .wrapper {
-    color:#c7c7c7;
+    color:#616161;
     font-size:26px;
     text-align:left;
 	padding:30px;
     font-family:'SegoeUI';
-    background-color:white !important;
+    background-color:#f6f6f6 !important;
     border:0px solid white !important;
     height:700px;
     overflow:scroll;
@@ -156,7 +144,7 @@ ul { list-style-type: none; text-align: left; margin:0px;}
 	top:720px;
     color:black;
     height: 60px;
-    background-color:white !important;
+    background-color:#f6f6f6 !important;
     border:0px solid white !important;
     z-index:3;
 }
@@ -218,7 +206,7 @@ h3{
 
 .position{
 	font-size:20px;
-	color:#d5d5d5;
+	color:#9ea4cb;
 	padding: 0px!important;
 	margin: 0px!important;
 	margin-left:8px !important;
@@ -227,7 +215,7 @@ h3{
 
 #map_canvas{
 	height:100px;
-	border:2px solid #c7c7c7;
+	border:2px solid #616161;
 	overflow: hidden !important;
 }
 
@@ -251,7 +239,7 @@ h3{
 }
 
 .contact_h{
-	color: #c7c7c7 !important;
+	color: #616161 !important;
 	padding:0px !important;
 	margin:0px !important;
 	padding-top: 30px !important;
