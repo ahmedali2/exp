@@ -120,8 +120,9 @@ ul { list-style-type: none; text-align: left; margin:0px;}
     color:black;
     height: 90px;
     border-bottom:0px solid black !important;
-    background: 0 0 repeat-x url("./icons/footer.png");
-    background-repeat:repeat-x; 
+    background: repeat-x url("./icons/footer.png");
+    background-position:left top !important;
+    background-repeat:repeat-x !important; 
 }
 
 .taber{
