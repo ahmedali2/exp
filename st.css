@@ -121,7 +121,6 @@ ul { list-style-type: none; text-align: left; margin:0px;}
     height: 90px;
     background-color:#f6f6f6 !important;
     border-bottom:1px solid black !important;
-    z-index:3;
     background: repeat url("./icons/footer.png"); 
 }
 
