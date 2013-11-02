@@ -120,8 +120,8 @@ ul { list-style-type: none; text-align: left; margin:0px;}
     color:black;
     height: 90px;
     border:0px !important;
-    background: 0 0 repeat-x url("./icons/footer.png");
-    background-position:0 0 !important;
+    background: 0px 0px repeat-x url("./icons/footer.png");
+    background-position:0px 0px !important;
     background-repeat:repeat-x !important; 
 }
 
@@ -140,17 +140,17 @@ ul { list-style-type: none; text-align: left; margin:0px;}
 	border:0px!important;
 }
 
-#t_about{ text-decoration:none !important; background-repeat:repeat-x;  border:0px!important; background-position: 0 0 !important;}
+#t_about{ text-decoration:none !important; background-repeat:repeat-x;  border:0px!important; background-position: 0px 0px !important;}
 
-#t_about.active{ background: 0 0 repeat url("./icons/footeractive.png") !important; background-repeat:repeat-x; border:0px!important; background-position: 0 0 !important;}
+#t_about.active{ background: 0 0 repeat url("./icons/footeractive.png") !important; background-repeat:repeat-x; border:0px!important; background-position: 0px 0px !important;}
 
 #t_goal{ text-decoration:none !important; background-repeat:repeat-x; border:0px!important; background-position: 0 0 !important;}
 
-#t_goal.active{ background: 0 0  repeat url("./icons/footeractive.png") !important; background-repeat:repeat-x; border:0px!important; background-position: 0 0 !important;}
+#t_goal.active{ background: 0 0  repeat url("./icons/footeractive.png") !important; background-repeat:repeat-x; border:0px!important; background-position: 0px 0px !important;}
 
-#t_target{ text-decoration:none !important;background-repeat:repeat-x; border:0px!important; background-position: 0 0 !important;}
+#t_target{ text-decoration:none !important;background-repeat:repeat-x; border:0px!important; background-position: 0px 0px !important;}
 
-#t_target.active{ background: repeat url("./icons/footeractive.png") !important; background-repeat:repeat-x; border:0px!important; background-position: 0 0 !important;}
+#t_target.active{ background: repeat url("./icons/footeractive.png") !important; background-repeat:repeat-x; border:0px!important; background-position: 0px 0px !important;}
 
 p{
 	text-shadow:none;
