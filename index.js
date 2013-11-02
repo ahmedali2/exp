@@ -5,7 +5,7 @@ $(document).on("pageshow", function () {
 	var height = (window.innerHeight > 0) ? window.innerHeight : screen.height;
 	$('.tag').css('height', (height-90));
 	$('.wrapper').css('height', (height-150));
-	$('.footer').css('top', (height-60));
+	$('.footer').css('top', (height-89));
 	console.log('done2');
 	$('.submit').css('top',(height-90));
 	$('#p_goal').hide();
@@ -13,10 +13,11 @@ $(document).on("pageshow", function () {
 	$('#p_about').show();
 	adjustTabs();
 
+	/*
 	$(".h_tabs").on("mousedown mouseup", function(e){
   	  $(this).toggleClass( "active", e.type === "mousedown" );
 	});
-
+	*/
 	$('#t_about').click(function(){
 		$('#p_goal').hide();
 		$('#p_target').hide();
@@ -58,6 +59,7 @@ $(document).on("pageshow", function () {
 	$('#c_message').keyup(function(){
 		enableSubmit();
 	});
+	
 });
 
 function adjustTabs(){

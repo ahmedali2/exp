@@ -118,36 +118,38 @@ ul { list-style-type: none; text-align: left; margin:0px;}
 	position:absolute;
 	top:720px;
     color:black;
-    height: 60px;
+    height: 90px;
     background-color:#f6f6f6 !important;
-    border:0px solid white !important;
+    border-bottom:1px solid black !important;
     z-index:3;
+    background: repeat url("./icons/footer.png"); 
 }
 
 .taber{
 	position:relative;
-	width:397px;
-	margin: 0 auto -199px;
+	width:100%;
 	color:white;
+	text-decoration:none !important;
 }
 
 .h_tabs{
 	float:left;
-	width:130px;
-	height:55px;
+	width:33.33%;
+	height:90px;
+
 }
 
-#t_about{ background-color:#f15852; }
+#t_about{ text-decoration:none !important; }
 
-#t_about.active{ background-color:#f4a2a2; }
+#t_about.active{ background: repeat url("./icons/footeractive.png")!important;  }
 
-#t_goal{ background-color:#e69843; }
+#t_goal{ text-decoration:none !important; }
 
-#t_goal.active{ background-color:#facd91; }
+#t_goal.active{ background: repeat url("./icons/footeractive.png")!important; }
 
-#t_target{ background-color:#23baa7; }
+#t_target{ text-decoration:none !important;}
 
-#t_target.active{ background-color:#94d2ad; }
+#t_target.active{ background: repeat url("./icons/footeractive.png")!important; }
 
 p{
 	text-shadow:none;
@@ -256,3 +258,7 @@ h3{
 	height: 100% !important;
 }
 
+.taber h3{
+	top:20px;
+	position:relative;
+}
