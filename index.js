@@ -6,9 +6,8 @@ $(document).on("pageshow", function () {
 	$('.tag').css('height', (height-90));
 	$('.wrapper').css('height', (height-150));
 	$('.footer').css('top', (height-89));
-	$('#line').css('top', (height-1));
+	$('.line').css('top', (height-1));
 	console.log('done2');
-	$('.submit').css('top',(height-90));
 	$('#p_goal').hide();
 	$('#p_target').hide();
 	$('#p_about').show();
@@ -41,10 +40,10 @@ $(document).on("pageshow", function () {
 	});	
 
 	//----------- Message -------------
-	$('.submit').attr('disabled','disabled');
+	$('#submit').attr('disabled','disabled');
 
-	$('.submit').click(function(){
-		if($('.submit').attr('disabled') == 'disabled'){
+	$('#submit').click(function(){
+		if($('#submit').attr('disabled') == 'disabled'){
 			console.log('its disabled');
 			 toast('Please type your email and a message..');
 		} else {
@@ -105,9 +104,9 @@ function toast(msg){
 
 function enableSubmit(){
 	if($('#c_email').val().trim()!='' && $('#c_message').val().trim()!= '') {
-		$('.submit').removeAttr('disabled');
+		$('#submit').removeAttr('disabled');
 	}else{
-		$('.submit').attr('disabled','disabled');
+		$('#submit').attr('disabled','disabled');
 	}
 }
 
@@ -133,7 +132,7 @@ function send(){
 					$('#c_email').val('');
 					$('#c_sub').val('');
 					$('#c_message').val('');
-					$('.submit').attr('disabled','disabled');
+					$('#submit').attr('disabled','disabled');
 				} else if(response.status=="error"){
 					//Show 'Sending Message failed try again later'
 					toast('Sending Message failed try again later.');

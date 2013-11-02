@@ -113,9 +113,6 @@ ul { list-style-type: none; text-align: left; margin:0px;}
     overflow:scroll;
 }
 
-#home .wrapper{
-	 overflow:hidden !important ;
-}
 
 .footer{
 	width:100%;
@@ -157,6 +154,7 @@ ul { list-style-type: none; text-align: left; margin:0px;}
 
 #t_target{ text-decoration:none !important;background-repeat:repeat-x; border:0px!important; background-position: 0px 0px !important;}
 
+#submit{ text-decoration:none !important;background-repeat:repeat-x; border:0px!important; background-position: 0px 0px !important;background-image: url(./icons/clicked.png);}
 
 p{
 	text-shadow:none;
@@ -240,22 +238,6 @@ h3{
 	height:160px !important;
 }
 
-.submit{
-	width:100% !important;
-	height:60px!important;
-	text-decoration: none !important;
-	color: white;
-	left:0px;
-	font-size:20px;
-	top: 700px ;
-	position: absolute;
-	background: repeat url("./icons/subx.png"); 
-}
-
-
-.submit:active{
-	background: repeat url("./icons/background.png"); 
-}
 
 .taber2{
 	position:relative;
