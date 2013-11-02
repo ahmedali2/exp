@@ -6,6 +6,7 @@ $(document).on("pageshow", function () {
 	$('.tag').css('height', (height-90));
 	$('.wrapper').css('height', (height-150));
 	$('.footer').css('top', (height-89));
+	$('#line').css('top', (height-1));
 	console.log('done2');
 	$('.submit').css('top',(height-90));
 	$('#p_goal').hide();
