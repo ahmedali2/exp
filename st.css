@@ -119,7 +119,7 @@ ul { list-style-type: none; text-align: left; margin:0px;}
 	top:720px;
     color:black;
     height: 90px;
-    border-bottom:0px solid black !important;
+    border:0px solid black !important;
     background: 0 0 repeat-x url("./icons/footer.png");
     background-position:top !important;
     background-repeat:repeat-x !important; 
@@ -139,17 +139,17 @@ ul { list-style-type: none; text-align: left; margin:0px;}
 
 }
 
-#t_about{ text-decoration:none !important; background-repeat:repeat-x; }
+#t_about{ text-decoration:none !important; background-repeat:repeat-x;  border:0px!important;}
 
-#t_about.active{ background: 0 0 repeat url("./icons/footeractive.png") !important; background-repeat:repeat-x; }
+#t_about.active{ background: 0 0 repeat url("./icons/footeractive.png") !important; background-repeat:repeat-x; border:0px!important;}
 
-#t_goal{ text-decoration:none !important; background-repeat:repeat-x;}
+#t_goal{ text-decoration:none !important; background-repeat:repeat-x; border:0px!important;}
 
-#t_goal.active{ background: 0 0  repeat url("./icons/footeractive.png") !important; background-repeat:repeat-x;}
+#t_goal.active{ background: 0 0  repeat url("./icons/footeractive.png") !important; background-repeat:repeat-x; border:0px!important;}
 
-#t_target{ text-decoration:none !important;background-repeat:repeat-x;}
+#t_target{ text-decoration:none !important;background-repeat:repeat-x; border:0px!important;}
 
-#t_target.active{ background: repeat url("./icons/footeractive.png") !important; background-repeat:repeat-x;}
+#t_target.active{ background: repeat url("./icons/footeractive.png") !important; background-repeat:repeat-x; border:0px!important;}
 
 p{
 	text-shadow:none;
