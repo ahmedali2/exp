@@ -137,17 +137,17 @@ ul { list-style-type: none; text-align: left; margin:0px;}
 
 }
 
-#t_about{ text-decoration:none !important; }
+#t_about{ text-decoration:none !important; background:none !important; background-repeat:repeat-x; }
 
-#t_about.active{ background: repeat url("./icons/footeractive.png")!important;  }
+#t_about.active{ background: repeat url("./icons/footeractive.png")!important; background-repeat:repeat-x; }
 
-#t_goal{ text-decoration:none !important; }
+#t_goal{ text-decoration:none !important; background-repeat:repeat-x;}
 
-#t_goal.active{ background: repeat url("./icons/footeractive.png")!important; }
+#t_goal.active{ background: repeat url("./icons/footeractive.png")!important; background-repeat:repeat-x;}
 
-#t_target{ text-decoration:none !important;}
+#t_target{ text-decoration:none !important;background-repeat:repeat-x;}
 
-#t_target.active{ background: repeat url("./icons/footeractive.png")!important; }
+#t_target.active{ background: repeat url("./icons/footeractive.png")!important; background-repeat:repeat-x;}
 
 p{
 	text-shadow:none;
