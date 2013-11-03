@@ -141,6 +141,7 @@ ul { list-style-type: none; text-align: left; margin:0px;}
 	width:33.33%;
 	height:90px;
 	border:0px!important;
+	text-decoration:none;
 }
 
 #t_about{ text-decoration:none !important; background-repeat:repeat-x;  border:0px!important; background-position: 0px 0px !important;}
