@@ -252,3 +252,10 @@ h3{
 	top:20px;
 	position:relative;
 }
+
+#schedule_content img{
+	top: 5px;
+	position:relative;
+	width:60px;
+	height:60px;
+}
