@@ -14,6 +14,12 @@ body{
 	height:37px;
 }
 
+.x{
+	padding-top:0px !important;
+	margin-top:0px !important;
+	font-size: 26px;
+	font-weight:bold;
+}
 .theHeader:not(#dialog_header), .ui-header:not(#dialog_header){
 	background: repeat url("./icons/background.png"); 
 	height: 90px;
