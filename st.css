@@ -272,3 +272,10 @@ h3{
 	width:75px;
 	height:90px;
 }
+
+#speakers_content img{
+	top: 5px;
+	position:relative;
+	width:75px;
+	height:90px;
+}
