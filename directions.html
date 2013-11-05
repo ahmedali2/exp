@@ -21,7 +21,7 @@
 	<div data-role="page" id="home">
 		<div data-role="panel" data-position="left" data-display="push" id="panel" data-theme="a" >
 			<ul id="panel_content" data-role="listview" data-icon="false" data-theme="b" data-divider-theme="a" style="margin-top:-16px;background-color:#036bb8 !important;" class="nav-search">
-				<li data-filtertext=""  data-theme='a' class="x1"><a data-transition="slide" data-ajax="false" class="b" href="./index.html"><img src="icons/homeicon.png"><p class="x">Home</p></a></li>
+				<li data-filtertext=""  data-theme='a' class="x1"><a data-transition="slide" data-ajax="false" class="b" href="./home.html"><img src="icons/homeicon.png"><p class="x">Home</p></a></li>
 				<li data-filtertext=""  data-theme='a' class="x2"><a data-transition="slide" data-ajax="false" class="b" href="./schedule.html"><img src="icons/scheduleicon.png"<p class="x">Schedule</p></a></li>
 				<li data-filtertext=""  data-theme='a' class="x3"><a data-transition="slide" data-ajax="false" class="b" href="./sponsors.html"><img src="icons/sponsorsicons.png"><p class="x">Sponsors</p></a></li>
 				<li data-filtertext="" data-theme='a' class="x4"><a data-transition="slide" data-ajax="false" class="b" href="./speakers.html"><img src="icons/speakers.png"><p class="x">Speakers</p></a></li>
@@ -59,14 +59,19 @@
 							$('#map_canvas').gmap('openInfoWindow', {'content': '<p style="font-size:30px"><strong>Wanha Satama</strong><br> Pikku Satamakatu 3<br>00160 Helsinki</p>'}, this);
 						});
 					}}); 
-					
+
 				});
-				
-				
 				
 				</script>
         	</div>
-        
+        	
+        	<div class="footer">
+		      <div class="taber">
+	      		<a data-role="none" href="" id="d_clip_button" class="h_tabs" style="width:100%"><h3 >Copy Address</h3></a>
+		      </div>
+		    </div>
+
+			<div style="z-index:4; width:100%; height: 2px; position:absolute; top:800px; background-color: #616161;" class="line"></div>
 
 		</div>
 	</div><!-- /Directions page-->		

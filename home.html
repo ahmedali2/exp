@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>Contact</title>
+    <title>Home</title>
      <meta name="viewport" content="width=device-width, initial-scale=0.7, user-scalable=1, minimum-scale=0.7, maximum-scale=0.7" />
     <link rel="stylesheet" href="icons/custom.css" />
 	<link rel="stylesheet" href="icons/jquerymobile.css"/>
@@ -14,7 +14,7 @@
 
   <body style="text-align: center; background-color:white;">
 
-		<!----------- Contact Page ----------->	
+	<!----------- Home Page ----------->	
 	<div data-role="page" id="home">
 		<div data-role="panel" data-position="left" data-display="push" id="panel" data-theme="a" >
 			<ul id="panel_content" data-role="listview" data-icon="false" data-theme="b" data-divider-theme="a" style="margin-top:-16px;background-color:#036bb8 !important;" class="nav-search">
@@ -26,35 +26,59 @@
 				<li data-filtertext="" data-theme='a' class="x6"><a data-transition="slide" class="b" href="./contact.html"><img src="icons/contacticon.png"><p class="x">Contact</p></a></li>
 			</ul>
 		</div><!-- /panel -->
-		
+
 		<div data-role="header" class="theHeader">
 			<a class="formenu" href="#panel" data-role="none"><img style="margin:0px !important;padding:0px !important;" src="icons/menu.png"/></a>
 			<div class="corner"></div>
-			<div class="header_title">Contact</div>
+			<div class="header_title">Home</div>
 		</div><!-- /header -->
 
 		<div data-role="content" class="tag">
-		
 			<div class="wrapper">
-				<p class="contact_h">Email</p>
-					<input type="text" data-theme="d" name="c_email" id="c_email" class="c_email"/>
-				<p class="contact_h">Subject</p>
-					<input type="text" data-theme="d" name="c_sub" id="c_sub" class="c_email"/>
-				<p class="contact_h">Message</p>
-					<textarea  rows="4" cols="50" data-theme="d" name="c_message" id="c_message" class="c_message"></textarea>
-				
+				<p style="color:#616161">Islam-Expo</p>
+				<p id="p_about" style="line-height:160% !important;">
+		    	   	Islam-Expo is an event that portrays Islamic culture and
+					Islam. The event, now organized for the third time, has
+					grown into a three-day event and is hoped to attract a
+					bigger audience than the previous ones. The main organizer
+					of the event is the Islamic Council of Finland, the
+					umbrella organization for Finnish Islamic organizations.
+				</p>
+				<p id="p_goal" style="line-height:160% !important;">
+					The goal of the event is to promote cooperation between
+					Muslims and the Finnish society, to bring Muslim organizations
+					together and to help them develop. In addition, the
+					aim is to foster a stronger foundation for being a Muslim
+					in Finland, demystify Islam, prevent and correct myths and
+					prejudices against Islam and Muslims and promote multiculturalism
+					in Finalnd.
+				</p>
+
+				<p id="p_target" style="line-height:160% !important;">
+		    	   	Islam-Expo is targeted for both Muslims and the general
+					public. Friday´s programme is designed for the general
+					public, officials and different sections of the society and
+					the focus is on the social and political aspects of Islam. On
+					Saturday and Sunday, the focus is more on Islam itself and
+					on other themes that are of interest to Finnish Muslims.
+					There is also programme for children so that families can
+					attend the Expo together.
+					
+				</p>
+				<br>
         	</div>
         
-      		 <div class="footer">
+		    <div class="footer">
 		      <div class="taber">
-	      		<a data-role="none" href="" id="submit" class="h_tabs" style="width:100%"><h3 >Send</h3></a>
+	      		<a data-role="none" href="" id="t_about" class="h_tabs"><h3 style="top:20px !important; position:relative;">About</h3></a>
+	      		<a data-role="none" href="" id="t_goal" class="h_tabs"><h3>Goal</h3></a>
+	      		<a data-role="none" href="" id="t_target" class="h_tabs"><h3>Target</h3></a>
 		      </div>
 		    </div>
 
 			<div style="z-index:4; width:100%; height: 2px; position:absolute; top:800px; background-color: #616161;" class="line"></div>
-		    
 		</div>
-	</div><!-- /Contact page-->		
+	</div><!-- /News page-->		
 
 	</body>
 </html>
