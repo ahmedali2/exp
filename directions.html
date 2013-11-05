@@ -47,7 +47,9 @@
 				var height = (window.innerHeight > 0) ? window.innerHeight : screen.height;
 
 				$(document).ready(function(){
+					$('.wrapper').css('height', '100%');
 					$('#directions').css('height',height);
+					
 					$('.tag').css('height', (height-90));
 					
 					 $('#map_canvas').css('height', (height-200));
