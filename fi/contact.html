@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Contact</title>
+     <meta name="viewport" content="width=device-width, initial-scale=0.7, user-scalable=1, minimum-scale=0.7, maximum-scale=0.7" />
+    <link rel="stylesheet" href="./../icons/custom.css" />
+	<link rel="stylesheet" href="./../icons/jquerymobile.css"/>
+    <script type="text/javascript" src="./../jquery.js"></script>
+    <script type="text/javascript" src="./../jquerymobile.js"></script>
+    <link rel="stylesheet" href="./../st.css"/>
+    <script type="text/javascript" src="./../index.js"></script>
+  </head>
+
+  <body style="text-align: center; background-color:white;">
+
+		<!----------- Contact Page ----------->	
+	<div data-role="page" id="home">
+		<div data-role="panel" data-position="left" data-display="push" id="panel" data-theme="a" >
+			<ul id="panel_content" data-role="listview" data-icon="false" data-theme="b" data-divider-theme="a" style="margin-top:-16px;background-color:#036bb8 !important;" class="nav-search">
+				<li data-filtertext="" data-theme='a' class="x1"><a data-transition="slide" class="b" href="./home.html"><img src="./../icons/homeicon.png"><p class="x">Home</p></a></li>
+				<li data-filtertext="" data-theme='a' class="x2"><a data-transition="slide" class="b" href="./schedule.html"><img src="./../icons/scheduleicon.png"><p class="x">Schedule</p></a></li>
+				<li data-filtertext="" data-theme='a' class="x3"><a data-transition="slide" class="b" href="./sponsors.html"><img src="./../icons/sponsorsicons.png"><p class="x">Sponsors</p></a></li>
+				<li data-filtertext="" data-theme='a' class="x4"><a data-transition="slide" class="b" href="./speakers.html"><img src="./../icons/speakers.png"><p class="x">Speakers</p></a></li>
+				<li data-filtertext="" data-theme='a' class="x5"><a data-transition="slide" rel="external" class="b" href="./directions.html"><img src="./../icons/directionicon.png"><p class="x">Venue</p></a></li>
+				<li data-filtertext="" data-theme='a' class="x6"><a data-transition="slide" class="b" href="./contact.html"><img src="./../icons/contacticon.png"><p class="x">Contact</p></a></li>
+			</ul>
+		</div><!-- /panel -->
+		
+		<div data-role="header" class="theHeader">
+			<a class="formenu" href="#panel" data-role="none"><img style="margin:0px !important;padding:0px !important;" src="./../icons/menu.png"/></a>
+			<div class="corner"></div>
+			<div class="header_title">Contact</div>
+		</div><!-- /header -->
+
+		<div data-role="content" class="tag">
+			<script>
+				$(document).ready(function () { 
+					var width = (window.innerWidth > 0) ? window.innerWidth : screen.width;
+					var height = (window.innerHeight > 0) ? window.innerHeight : screen.height;
+
+					if (height > 1200 && width > 700 || height > 700 && width > 1200  ){
+						$('#c_message').hide();		
+						$('#c_message2').show();											
+						console.log('changed');
+					} else {
+						console.log('not a tablet'); console.log(height, width);
+						$('#c_message').show();		
+						$('#c_message2').hide();	
+					}
+				});
+				
+				
+			</script>
+			<div class="wrapper" >
+				<p class="contact_h">Email</p>
+					<input type="text" data-theme="d" name="c_email" id="c_email" class="c_email"/>
+				<p class="contact_h">Phone</p>
+					<input type="text" data-theme="d" name="c_sub" id="c_sub" class="c_email"/>
+				<p class="contact_h">Feedback</p>
+					<textarea  rows="4" cols="50" data-theme="d" name="c_message" id="c_message" class="c_message" style="display:none;height:160px !important;"></textarea>
+					<textarea  rows="4" cols="50" data-theme="d" name="c_message" id="c_message2" class="c_message" style="display:none;height:560px !important;"></textarea>
+        	</div>
+        
+      		 <div class="footer">
+		      <div class="taber">
+	      		<a data-role="none" href="" id="submit" class="h_tabs" style="width:100%"><h3 class="about_t">Send</h3></a>
+		      </div>
+		    </div>
+
+			<div style="z-index:4; width:100%; height: 2px; position:absolute; top:800px; background-color: #616161;" class="line"></div>
+		    
+		</div>
+	</div><!-- /Contact page-->		
+
+	</body>
+</html>
+	

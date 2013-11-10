@@ -18,19 +18,24 @@
 	<div data-role="page" id="home">
 
 		<div data-role="content" class="tag">
-			<div class="wrapper" style="
-				 background: url(icons/image.png) no-repeat center center fixed;
-					-webkit-background-size: cover;
-					-moz-background-size: cover;
-					-o-background-size: cover;
-					background-size: cover;
-			">
-				
+			<div class="wrapper" id="cover_div" style="
+				 background: url(icons/cover480.png) no-repeat center center fixed; -webkit-background-size: cover; -moz-background-size: cover;-o-background-size: cover; background-size: cover;">
+				<div style="position:relative; top:500px !important; height:80px; width:100%;">
+					<label for="select-choice-0" class="select" data-theme="c"></label>
+					<select name="select-choice-0" data-theme="b" id="select-choice-1" >
+						<option value="arabic">عربي</option>
+						<option value="english">English</option>
+						<option value="finnish">Suomalainen</option>
+					</select>
+				</div>
+
         	</div>
-        
+
+			
+        	
 		   <div class="footer">
 		      <div class="taber">
-	      		<a data-role="none" href="./home.html" id="start" class="h_tabs" style="width:100%;background: repeat url('./icons/background.png') !important ;"><h3 style="top:10px!important;" >Start</h3></a>
+	      		<a data-role="none" href="./en/home.html" id="start" class="h_tabs" style="background-color:green !important;" ><h3 style="top:10px" id="start_title" >START</h3></a>
 		      </div>
 		    </div>
 
