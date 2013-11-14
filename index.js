@@ -22,6 +22,7 @@ $(document).on("pageshow", function () {
 		$('.wrapper input').css('font-size','35px').css('padding-top','8px').css('margin-top','8px');
 		$('textarea').css('font-size','35px');
 		$('.toast_message').css('font-size','35px !important');
+		$('#cover_list').css('top','1000');
 		
 	} else if (height >700 && height < 1200  ) {
 		console.log('its wvga 480');
