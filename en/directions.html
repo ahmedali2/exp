@@ -19,9 +19,13 @@
 
 		function onDeviceReady(){
 			 if(internetConnection()){
-			 	alert('Internet');
+			 	//alert('Internet');
+				
+			 	
 			 } else {
-			 	alert('No Internet');
+			 	//alert('No Internet');
+				$('#map_canvas').hide();
+			 	$('#map_canvas_img').show();
 			 }
 		}
 
@@ -74,6 +78,8 @@
 			<div class="wrapper">
 				<br>
 				<div id="map_canvas"></div>
+				<div id="map_canvas_img" style="display:none"><img src="./../icons/menu.png" /></div>
+				
 				 <script type="text/javascript">
 				 
 				var width = (window.innerWidth > 0) ? window.innerWidth : screen.width;
@@ -85,8 +91,9 @@
 					
 					$('.tag').css('height', (height-90));
 					
-					 $('#map_canvas').css('height', (height-200));
-					 
+					$('#map_canvas').css('height', (height-200));
+					$('#map_canvas_img').css('height', (height-200));	 
+					
 					var mobileDemo = { 'center': '60.165694, 24.966224', 'zoom': 17 };
 					$('#map_canvas').gmap({'center': mobileDemo.center, 'zoom': mobileDemo.zoom, 'disableDefaultUI':true, 'callback': function() {
 						var self = this;
