@@ -23,7 +23,6 @@ $(document).on("pageshow", function () {
 		$('textarea').css('font-size','35px');
 		$('.toast_message').css('font-size','35px !important');
 		$('#cover_list').css('top','1180px');
-		$('#map_canvas_img img').attr('height','100%');
 		
 	} else if (height >700 && height < 1200  ) {
 		console.log('its wvga 480');
@@ -225,7 +224,6 @@ $(document).ready(function() {
 		$('textarea').css('font-size','35px');
 		$('.toast_message').css('font-size','35px !important');
 		$('#cover_list').css('top','1180px');
-		$('#map_canvas_img img').attr('height','100%');
 		
 	} else if (height >700 && height < 1200  ) {
 		console.log('its wvga 480');
