@@ -26,9 +26,12 @@
 
 					$('#start').attr('href','./en/home.html');
 					console.log($('#start').attr('href'));
+					$('#start_title').html('Start');
+					
 				} else if ($('#select-choice-1').selectmenu().val() == 'finnish'){
 					$('#start').attr('href','./fi/home.html');
 					console.log($('#start').attr('href'));
+					$('#start_title').html('Aloita');
 				}
 			});
 		});
@@ -42,7 +45,6 @@
 				<div style="position:relative; top:565px !important; height:120px !important; width:80% !important;font-size:30px !important; margin:0px auto;" id="cover_list">
 					<label for="select-choice-0" class="select" data-theme="c"></label>
 					<select name="select-choice-0" data-theme="b" id="select-choice-1" >
-						<option value="arabic">عربي</option>
 						<option value="english">English</option>
 						<option value="finnish">Suomi</option>
 					</select>
