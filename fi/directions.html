@@ -1,79 +1,231 @@
 <!DOCTYPE html>
+
 <html lang="en">
+
   <head>
+
     <meta charset="utf-8">
+
     <title>Venue</title>
+
      <meta name="viewport" content="width=device-width, initial-scale=0.7, user-scalable=1, minimum-scale=0.7, maximum-scale=0.7" />
+
     <link rel="stylesheet" href="./../icons/custom.css" />
+
 	<link rel="stylesheet" href="./../icons/jquerymobile.css"/>
+
     <script type="text/javascript" src="./../jquery.js"></script>
+
     <script type="text/javascript" src="./../jquerymobile.js"></script>
+
     <link rel="stylesheet" href="./../st.css"/>
+
     <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=true"></script>
+
 	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
+
 	<script type="text/javascript" src="./../jquery.ui.map.js"></script>	
-   <script type="text/javascript" src="./../index.js"></script>	
+
+    <script type="text/javascript" src="./../index.js"></script>	
+
+    <script type="text/javascript" src="./../cordova.js"></script>	
+
+	<script type="text/javascript">
+
+		document.addEventListener("deviceready", onDeviceReady, false);
+
+
+
+		function onDeviceReady(){
+
+			 if(internetConnection()){
+
+			 	//alert('Internet');
+
+			 	
+
+			 } else {
+
+			 	//alert('No Internet');
+
+				$('#map_canvas').hide();
+
+			 	$('#map_canvas_img').show();
+
+			 }
+
+		}
+
+
+
+		
+
+	function internetConnection() {
+
+		var networkState = navigator.connection.type;
+
+
+
+		var states = {};
+
+		states[Connection.UNKNOWN] = 'Unknown connection';
+
+		states[Connection.ETHERNET] = 'Ethernet connection';
+
+		states[Connection.WIFI] = 'WiFi connection';
+
+		states[Connection.CELL_2G] = 'Cell 2G connection';
+
+		states[Connection.CELL_3G] = 'Cell 3G connection';
+
+		states[Connection.CELL_4G] = 'Cell 4G connection';
+
+		states[Connection.CELL] = 'Cell generic connection';
+
+		states[Connection.NONE] = 'No network connection';
+
+
+
+		if ((states[networkState] == "No network connection") || (states[networkState] == "Unknown connection")) interNet = false;
+
+		else interNet = true;
+
+		return interNet;
+
+	}
+
+	</script>
+
+   
+
+
+
   </head>
+
+
 
   <body style="text-align: center; background-color:white;">
 
+
+
 		<!----------- Directions Page ----------->	
+
 	<div data-role="page" id="home">
+
 		<div data-role="panel" data-position="left" data-display="push" id="panel" data-theme="a" >
+
 			<ul id="panel_content" data-role="listview" data-icon="false" data-theme="b" data-divider-theme="a" style="margin-top:-16px;background-color:#036bb8 !important;" class="nav-search">
+
 				<li data-filtertext=""  data-theme='a' class="x1"><a data-transition="slide" data-ajax="false" class="b" href="./home.html"><img src="./../icons/homeicon.png"><p class="x">Aloita</p></a></li>
+
 				<li data-filtertext=""  data-theme='a' class="x2"><a data-transition="slide" data-ajax="false" class="b" href="./schedule.html"><img src="./../icons/scheduleicon.png"<p class="x">Ohjelma</p></a></li>
+
 				<li data-filtertext=""  data-theme='a' class="x3"><a data-transition="slide" data-ajax="false" class="b" href="./sponsors.html"><img src="./../icons/sponsorsicons.png"><p class="x">Yhteistyössä</p></a></li>
+
 				<li data-filtertext="" data-theme='a' class="x4"><a data-transition="slide" data-ajax="false" class="b" href="./speakers.html"><img src="./../icons/speakers.png"><p class="x">Puhujat</p></a></li>
+
 				<li data-filtertext="" data-theme='a' class="x5"><a data-transition="slide" rel="external" class="b" href="./directions.html"><img src="./../icons/directionicon.png"><p class="x">Paikka</p></a></li>
+
 				<li data-filtertext="" data-theme='a' class="x6"><a data-transition="slide" data-ajax="false" class="b" href="./contact.html"><img src="./../icons/contacticon.png"><p class="x">Palaute</p></a></li>
+
 			</ul>
+
 		</div><!-- /panel -->
+
 		
+
 		<div data-role="header" class="theHeader">
+
 			<a class="formenu" href="#panel" data-role="none"><img style="margin:0px !important;padding:0px !important;" src="./../icons/menu.png"/></a>
+
 			<div class="corner"></div>
+
 			<div class="header_title">Paikka</div>
+
 		</div><!-- /header -->
 
+
+
 		<div data-role="content" class="tag">
+
 			
+
 			<div class="wrapper">
+
 				<br>
+
 				<div id="map_canvas"></div>
+
 				<div id="map_canvas_img" style="display:none"><img src="./../icons/screen_map.png" width="100%" height="100%" /></div>
-				  <script type="text/javascript">
+
+				
+
+				 <script type="text/javascript">
+
 				 
+
 				var width = (window.innerWidth > 0) ? window.innerWidth : screen.width;
+
 				var height = (window.innerHeight > 0) ? window.innerHeight : screen.height;
 
+
+
 				$(document).ready(function(){
+
 					$('.wrapper').css('height', '100%');
+
 					$('#directions').css('height',height);
+
 					
+
 					$('.tag').css('height', (height-90));
+
 					
+
 					$('#map_canvas').css('height', (height-200));
+
 					$('#map_canvas_img').css('height', (height-200));	 
+
 					
+
 					var mobileDemo = { 'center': '60.165694, 24.966224', 'zoom': 17 };
+
 					$('#map_canvas').gmap({'center': mobileDemo.center, 'zoom': mobileDemo.zoom, 'disableDefaultUI':true, 'callback': function() {
+
 						var self = this;
+
 						self.addMarker({'position': this.get('map').getCenter() }).click(function() {
+
 							$('#map_canvas').gmap('openInfoWindow', {'content': '<p style="font-size:30px"><strong>Wanha Satama</strong><br> Pikku Satamakatu 3<br>00160 Helsinki</p>'}, this);
+
 						});
+
 					}}); 
 
+
+
 				});
+
 				
+
 				</script>
+
         	</div>
+
         	
+
         
 
+
+
 		</div>
+
 	</div><!-- /Directions page-->		
 
+
+
 	</body>
+
 </html>
+
 	
