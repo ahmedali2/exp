@@ -13,7 +13,26 @@
   </head>
 
   <body style="text-align: center; background-color:white;">
+	<script type="text/javascript">
+		$(document).ready(function(){
 
+			$("#select-choice-1").bind( "change", function(event, ui) {
+			
+		
+				if($('#select-choice-1').selectmenu().val() == 'arabic'){
+					$('#start').attr('href','./ar/home.html');
+					console.log($('#start').attr('href'));
+				} else if ($('#select-choice-1').selectmenu().val() == 'english'){
+
+					$('#start').attr('href','./en/home.html');
+					console.log($('#start').attr('href'));
+				} else if ($('#select-choice-1').selectmenu().val() == 'finnish'){
+					$('#start').attr('href','./fi/home.html');
+					console.log($('#start').attr('href'));
+				}
+			});
+		});
+	</script>
 	<!----------- Home Page ----------->	
 	<div data-role="page" id="home">
 
@@ -35,7 +54,7 @@
         	
 		   <div class="footer">
 		      <div class="taber">
-	      		<a data-role="none" href="./en/home.html" id="start" class="h_tabs" style="background-color:green !important;" ><h3 style="top:10px" id="start_title" >START</h3></a>
+	      		<a data-role="none" href="./en/home.html" id="start" class="h_tabs"  ><h3 style="top:10px" id="start_title" >START</h3></a>
 		      </div>
 		    </div>
 

@@ -148,7 +148,14 @@ function send(){
 
 				if(response.status=="success"){
 					//Show 'Message Sent!'
-					toast('Message Sent!');			
+						if($('.header_title').html() == 'Palaute'){
+							toast('lähetetty!');
+						} else if($('.header_title').html() == 'رأيك'){
+							toast('!أرسلت');
+						} else {
+							toast('Message Sent!');	
+						}
+					
 					$('#c_email').val('');
 					$('#c_sub').val('');
 					$('#c_message').val('');
@@ -156,11 +163,24 @@ function send(){
 					$('#submit').attr('disabled','disabled');
 				} else if(response.status=="error"){
 					//Show 'Sending Message failed try again later'
-					toast('Sending Message failed try again later.');
+					
+					if($('.header_title').html() == 'Palaute'){
+						toast('lähetetty!');
+					} else if($('.header_title').html() == 'رأيك'){
+						toast('!خطأ');
+					} else {
+						toast('Sending Message failed try again later.');
+					}
 				}					
 			} else {
 				//Show alert about the error
-				toast('Sending Message failed try again later.');
+					if($('.header_title').html() == 'Palaute'){
+						toast('lähetetty!');
+					} else if($('.header_title').html() == 'رأيك'){
+						toast('!خطأ');
+					} else {
+						toast('Sending Message failed try again later.');
+					}
 			}
 		} 
 	});
@@ -180,6 +200,76 @@ $(document).ready(function() {
 	console.log('the header div: ',$('.theHeader').height());	
 	console.log('the card div: ',$('.card').height());
 
+	var width = (window.innerWidth > 0) ? window.innerWidth : screen.width;
+	var height = (window.innerHeight > 0) ? window.innerHeight : screen.height;
+	$('.tag').css('height', (height-90));
+	$('.wrapper').css('height', (height-150));
+	$('.footer').css('top', (height-89));
+	$('.line').css('top', (height-1));
+	console.log('done2');
+
+	if (height > 1200 && width > 700 ){
+		console.log('its a tablet');
+		$('#cover_div').css('background-image',"url(./icons/cover1280.png)");
+		$('#start_title').css('font-size','30px').css('top','-5px');
+		$('.about_t').css('font-size','30px').css('top','-5px');
+		$('.header_title').css('font-size','35px').css('top','20px');
+		$('#schedule_content img').css('width','90').css('height','90');
+		$('#speakers_content img').css('width','120').css('height','144');
+		$('#sponsors_content img').css('width','70').css('height','84');
+		$('#turkey').css('width','84px !important').css('height','84px !important');
+		$('.wrapper input').css('font-size','35px').css('padding-top','8px').css('margin-top','8px');
+		$('textarea').css('font-size','35px');
+		$('.toast_message').css('font-size','35px !important');
+
+		
+	} else if (height >700 && height < 1200  ) {
+		console.log('its wvga 480');
+		$('#cover_div').css('background-image',"url(./icons/cover480.png)");
+		$('.wrapper input').css('font-size','24px').css('padding-top','8px').css('margin-top','8px');
+		$('textarea').css('font-size','24px');
+	}
+
+	manageLowerPanel('#t_goal', '#t_target','#t_about', '#p_goal', '#p_target', '#p_about');
+
+	manageLowerPanel('#t_sun', '#t_sat','#t_fri', '#p_sun', '#p_sat', '#p_fri');
+	
+	//----------- Message -------------
+	$('#submit').attr('disabled','disabled');
+
+	$('#submit').click(function(){
+		if($('#submit').attr('disabled') == 'disabled'){
+			console.log('its disabled');
+			 toast('Please type your email and a message..');
+		} else {
+			console.log('its enabled');
+			send();
+		}
+	});
+	
+	$('#c_email').keyup(function(){
+		enableSubmit();
+	});
+	
+	$('#c_sub').keyup(function(){
+		enableSubmit();
+	});
+
+	$('#c_message').keyup(function(){
+		enableSubmit();
+	});
+
+	$('#c_message2').keyup(function(){
+		enableSubmit();
+	});
+
+	if (height > 1200 && width > 700 || height > 700 && width > 1200  ){
+		console.log('its galaxy S lll or a tablet ');
+		$('.tag p').css('font-size','43px');
+		$('#c_message').attr('cols','100');
+	} else {
+		console.log('not a tablet'); console.log(height, width);
+	}
 	
 }); 
 
