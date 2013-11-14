@@ -22,13 +22,14 @@ $(document).on("pageshow", function () {
 		$('.wrapper input').css('font-size','35px').css('padding-top','8px').css('margin-top','8px');
 		$('textarea').css('font-size','35px');
 		$('.toast_message').css('font-size','35px !important');
-		$('#cover_list').css('top','1000');
+		$('#cover_div').css('top','1000');
 		
 	} else if (height >700 && height < 1200  ) {
 		console.log('its wvga 480');
 		$('#cover_div').css('background-image',"url(./icons/cover480.png)");
 		$('.wrapper input').css('font-size','24px').css('padding-top','8px').css('margin-top','8px');
 		$('textarea').css('font-size','24px');
+		
 	}
 
 	manageLowerPanel('#t_goal', '#t_target','#t_about', '#p_goal', '#p_target', '#p_about');
