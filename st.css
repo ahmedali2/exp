@@ -1,6 +1,15 @@
 
 @font-face { font-family: 'SegoeUI' !important; src: url('icons/segoeuil.TTF') !important; }
 
+@media screen and (orientation: portrait) {
+ @-ms-viewport {
+    width: 320px;
+    user-zoom: fixed;
+    max-zoom: 1;
+    min-zoom: 1;
+ }
+}
+
 body{
 	background-color:#f6f6f6 !important;
 	text-shadow:none !important;
