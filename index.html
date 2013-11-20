@@ -27,14 +27,17 @@
 					$('#start').attr('href','./en/home.html');
 					console.log($('#start').attr('href'));
 					$('#start_title').html('Start');
+					window.location.href='./en/home.html';	
 					
 					
 				} else if ($('#select-choice-1').selectmenu().val() == 'finnish'){
 					$('#start').attr('href','./fi/home.html');
 					console.log($('#start').attr('href'));
 					$('#start_title').html('Aloita');
+					window.location.href='./en/home.html';	
 				}
 			});
+
 			$('#start').click(function(){
 				window.location.href='./en/home.html';	
 			});
@@ -59,8 +62,8 @@
 			
         	
 		   <div class="footer">
-		      <div class="taber">
-	      		<a data-role="none" href="" id="start" class="h_tabs"  ><h3 style="top:10px" id="start_title" >START</h3></a>
+		      <div class="taber" style="display:none !important;">
+	      		<a data-role="none" href="./en/home.html" id="start" class="h_tabs"  ><h3 style="top:10px" id="start_title" >START</h3></a>
 		      </div>
 		    </div>
 
